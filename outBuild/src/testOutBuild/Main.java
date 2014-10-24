@@ -1,4 +1,4 @@
-package outBuild;
+package testOutBuild;
 	
 import java.util.Observer;
 
@@ -38,7 +38,7 @@ import javafx.scene.paint.Color;
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
-		primaryStage.setTitle("»êÃâ ÇÁ·Î±×·¥");
+		primaryStage.setTitle("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î±×·ï¿½");
 		
 		BorderPane root = new BorderPane();
 		Scene scene = new Scene(root, 400, 270, Color.WHITE);
