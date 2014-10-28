@@ -1,12 +1,12 @@
-package outBuild.menus.menu;
+package outBuild.ui.menu;
 
 import javafx.collections.ObservableList;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.SeparatorMenuItem;
-import outBuild.menus.menuItem.ExitMenuItem;
-import outBuild.menus.menuItem.NewMenuItem;
-import outBuild.menus.menuItem.SaveMenuItem;
+import outBuild.ui.menuItem.ExitMenuItem;
+import outBuild.ui.menuItem.NewMenuItem;
+import outBuild.ui.menuItem.SaveMenuItem;
 
 public class FileMenu extends Menu {
 	

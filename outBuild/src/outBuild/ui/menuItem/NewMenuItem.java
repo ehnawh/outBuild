@@ -1,4 +1,4 @@
-package outBuild.menus.menuItem;
+package outBuild.ui.menuItem;
 
 import javafx.scene.control.MenuItem;
 
