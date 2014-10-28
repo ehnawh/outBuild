@@ -3,6 +3,7 @@ package outBuild.main;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.ListView;
@@ -24,7 +25,7 @@ public class Main extends Application {
 		primaryStage.setTitle("산출 프로그램");
 		
 		BorderPane root = new BorderPane();
-		Scene scene = new Scene(root, 900, 600, Color.WHITE);
+		Scene scene = new Scene(root, 1080, 600, Color.WHITE);
 		
 		TopMenuBar topMenuBar = new TopMenuBar();
 		root.setTop(topMenuBar);
@@ -34,10 +35,14 @@ public class Main extends Application {
 		gridPane.setHgap(10);
 		gridPane.setVgap(10);
 		ColumnConstraints column1 = new ColumnConstraints(150, 150, Double.MAX_VALUE);
-		ColumnConstraints column2 = new ColumnConstraints(50);
-		ColumnConstraints column3 = new ColumnConstraints(150, 150, Double.MAX_VALUE);
+		ColumnConstraints column2 = new ColumnConstraints(150, 150, Double.MAX_VALUE);
+		ColumnConstraints column3 = new ColumnConstraints(100, 100, Double.MAX_VALUE);
+		column1.setHalignment(HPos.LEFT);
+		column2.setHalignment(HPos.CENTER);
+		column3.setHalignment(HPos.RIGHT);
 		column1.setHgrow(Priority.ALWAYS);
-		column3.setHgrow(Priority.ALWAYS);
+		column2.setHgrow(Priority.ALWAYS);
+//		column3.setHgrow(Priority.ALWAYS);
 		gridPane.getColumnConstraints().addAll(column1, column2, column3);
 		
 		final ObservableList<String> testData = FXCollections.observableArrayList("test1", "test2");
@@ -45,7 +50,7 @@ public class Main extends Application {
 		gridPane.add(listView, 0, 1);
 		TreeItem<String> treeItems = new TreeItem<>("test11");
 		TreeView<String> treeView = new TreeView<String>(treeItems);
-		gridPane.add(treeView, 2, 1);
+		gridPane.add(treeView, 1, 1);
 		
 		root.setCenter(gridPane);
 		GridPane.setVgrow(root, Priority.ALWAYS);
