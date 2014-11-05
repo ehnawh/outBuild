@@ -10,7 +10,7 @@ import outBuild.ui.frame.MainFrame;
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
-		MainFrame root = new MainFrame();
+		MainFrame root = new MainFrame(primaryStage);
 		Scene scene = new Scene(root, 1600, 800, Color.WHITE);
 		
 		scene.getStylesheets().add(getClass().getResource("/outBuild/style/application.css").toExternalForm());
