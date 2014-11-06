@@ -1,14 +1,10 @@
 package outBuild.ui.frame;
 
-import outBuild.ui.contextmenu.ExplorerContextMenu;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.scene.control.Menu;
-import javafx.scene.control.MenuItem;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import outBuild.ui.contextmenu.ExplorerContextMenu;
 
 public class ContentsFrame extends BorderPane {
 
