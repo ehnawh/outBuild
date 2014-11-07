@@ -177,7 +177,7 @@
                                                             <TableColumn fx:id="productFuncColumn" text="산식" />
                                                             <TableColumn fx:id="productQuantityColumn" text="물량" />
                                                             <TableColumn fx:id="productPriceColumn" text="금액" />
-                                                            <TableColumn fx:id="productNameColumn" text="비고" />
+                                                            <TableColumn fx:id="productNoteColumn" text="비고" />
                                                          </columns>
                                                       </TableView>
                                                    </children>

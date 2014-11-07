@@ -12,12 +12,16 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class MainApp extends Application {
-	
+
 	private Stage primaryStage;
 	private VBox root;
-	private ObservableList<TreeItem<String>> treeItems = FXCollections.observableArrayList();
-	private ObservableList<Property> propertyData = FXCollections.observableArrayList();
-	
+	private ObservableList<TreeItem<String>> treeItems = FXCollections
+			.observableArrayList();
+	private ObservableList<Property> propertyData = FXCollections
+			.observableArrayList();
+	private ObservableList<Product> productData = FXCollections
+			.observableArrayList();
+
 	public MainApp() {
 		treeItems.add(new TreeItem<String>("SIDE-P/전개1-1"));
 		treeItems.add(new TreeItem<String>("S/P토루(전2하-1)"));
@@ -57,33 +61,43 @@ public class MainApp extends Application {
 		propertyData.add(new Property("천공깊이-보통암 최소높이", 0));
 		propertyData.add(new Property("파일원주길이", 0));
 		propertyData.add(new Property("파일 단면적", 0));
+
+		productData.add(new Product("SIDE-PILE 천공", "1*1", "1", "100", ""));
+		productData.add(new Product("SIDE-PILE 연결", "2*2", "4", "400", ""));
+		productData.add(new Product("레미콘파넬/SIDE-PILE용", "3*3", "9", "900", "기타1"));
+		productData.add(new Product("품1", "4*4", "16", "1600", ""));
+		productData.add(new Product("품2", "5*5", "25", "2500", ""));
 	}
-	
+
 	public ObservableList<TreeItem<String>> getTreeItems() {
 		return this.treeItems;
 	}
-	
+
 	public ObservableList<Property> getPropertyData() {
 		return this.propertyData;
+	}
+
+	public ObservableList<Product> getProductData() {
+		return this.productData;
 	}
 
 	@Override
 	public void start(Stage primaryStage) {
 		this.primaryStage = primaryStage;
 		this.primaryStage.setTitle("산출관리프로그램");
-		
+
 		initRootLayout();
 	}
-	
+
 	public void initRootLayout() {
 		try {
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(MainApp.class.getResource("main.fxml"));
-			this.root = (VBox)loader.load();
-			
+			this.root = (VBox) loader.load();
+
 			MainAppController controller = loader.getController();
 			controller.setMainApp(this);
-			
+
 			Scene scene = new Scene(root);
 			this.primaryStage.setScene(scene);
 			this.primaryStage.show();
@@ -91,7 +105,7 @@ public class MainApp extends Application {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public Stage getPrimaryStage() {
 		return this.primaryStage;
 	}
