@@ -3,12 +3,14 @@ package outBuild.ui.contextmenu;
 import outBuild.ui.dialog.ProjectDialog;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.ContextMenu;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Modality;
@@ -24,14 +26,21 @@ public class ExplorerContextMenu extends ContextMenu {
         MenuItem menuItem12 = new MenuItem("Class");
 
         menuItem11.setOnAction((ActionEvent ae) -> {
-            final Stage dialog = new Stage();
-            dialog.initModality(Modality.APPLICATION_MODAL);
-            dialog.initOwner(primaryStage);
-            VBox dialogVbox = new VBox(20);
-            dialogVbox.getChildren().add(new Text("This is a Dialog"));
-            Scene dialogScene = new Scene(new ProjectDialog());
-            dialog.setScene(dialogScene);
-            dialog.show();
+            try {
+                final Stage dialog = new Stage();
+                dialog.initModality(Modality.APPLICATION_MODAL);
+                dialog.initOwner(primaryStage);
+                
+                FXMLLoader loader = new FXMLLoader();
+                loader.setLocation(ProjectDialog.class.getResource("ProjectDialog.fxml"));
+				GridPane g = (GridPane)loader.load();
+	            Scene dialogScene = new Scene(g);
+	            dialog.setScene(dialogScene);
+	            dialog.show();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
         });
         
         menu1.getItems().addAll(menuItem11, menuItem12);

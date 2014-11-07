@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="798.0" prefWidth="1033.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <children>
+      <SplitPane dividerPositions="0.29797979797979796" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0">
+               <children>
+                  <TreeView layoutX="7.0" layoutY="14.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0">
+               <children>
+                  <SplitPane dividerPositions="0.6561712846347607" orientation="VERTICAL" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                        <VBox>
+                           <children>
+                              <HBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <Label text="Sseach Text : ">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <Label text="Sseach Text : ">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <ChoiceBox>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </ChoiceBox>
+                                    <CheckBox mnemonicParsing="false" text="All data">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" text="Use data">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                 </children>
+                              </HBox>
+                              <TableView>
+                                 <columns>
+                                    <TableColumn minWidth="-Infinity" prefWidth="200.0" text="goods name" />
+                                    <TableColumn minWidth="-1.0" prefWidth="200.0" text="standard" />
+                                    <TableColumn minWidth="-1.0" prefWidth="90.0" text="measure" />
+                                    <TableColumn minWidth="-1.0" prefWidth="90.0" text="extra charge" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </VBox>
+                        <VBox>
+                           <children>
+                              <Label text="Subdiairy materials" />
+                              <TableView>
+                                 <columns>
+                                    <TableColumn minWidth="-Infinity" prefWidth="200.0" text="goods name" />
+                                    <TableColumn minWidth="-1.0" prefWidth="200.0" text="standard" />
+                                    <TableColumn minWidth="-1.0" prefWidth="90.0" text="measure" />
+                                    <TableColumn minWidth="-1.0" prefWidth="90.0" text="extra charge" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </VBox>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

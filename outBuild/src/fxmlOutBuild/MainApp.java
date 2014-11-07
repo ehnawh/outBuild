@@ -17,6 +17,8 @@ public class MainApp extends Application {
 	private VBox root;
 	private ObservableList<TreeItem<String>> treeItems = FXCollections
 			.observableArrayList();
+	private ObservableList<TreeItem<String>> treeItems2 = FXCollections
+			.observableArrayList();
 	private ObservableList<Property> propertyData = FXCollections
 			.observableArrayList();
 	private ObservableList<Product> productData = FXCollections
@@ -48,6 +50,19 @@ public class MainApp extends Application {
 		treeItems.add(new TreeItem<String>("토공사(흙파기)"));
 		treeItems.add(new TreeItem<String>("부대토목"));
 		treeItems.add(new TreeItem<String>("파일공사"));
+		
+		treeItems2.add(new TreeItem<String>("공통 가설 공사"));
+		treeItems2.add(new TreeItem<String>("가설공사"));
+		treeItems2.add(new TreeItem<String>(""));
+		treeItems2.add(new TreeItem<String>(""));
+		treeItems2.add(new TreeItem<String>(""));
+		treeItems2.add(new TreeItem<String>(""));
+		treeItems2.add(new TreeItem<String>(""));
+		treeItems2.add(new TreeItem<String>(""));
+		treeItems2.add(new TreeItem<String>(""));
+		treeItems2.add(new TreeItem<String>(""));
+		treeItems2.add(new TreeItem<String>(""));
+		treeItems2.add(new TreeItem<String>(""));
 
 		propertyData.add(new Property("토류판면적", 0));
 		propertyData.add(new Property("파일천공개수", 0));

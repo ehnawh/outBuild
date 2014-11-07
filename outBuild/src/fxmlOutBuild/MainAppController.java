@@ -12,6 +12,8 @@ public class MainAppController {
 	@FXML
 	private TreeView<String> projectTreeView;
 	@FXML
+	private TreeView<String> materialTreeView;
+	@FXML
 	private TableView<Property> propertyTableView; 
 	@FXML
 	private TableColumn<Property, String> nameColumn;
