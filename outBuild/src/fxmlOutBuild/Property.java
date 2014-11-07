@@ -9,6 +9,7 @@ public class Property {
 
 	private StringProperty name;
 	private IntegerProperty value;
+	private StringProperty note;
 	
 	public Property() {
 		this(null, 0);
@@ -40,4 +41,13 @@ public class Property {
 		return this.value;
 	}
 	
+	public String getNote() {
+		return note.get();
+	}
+	public void setNote(String note) {
+		this.note.set(note);
+	}
+	public StringProperty noteProperty() {
+		return this.note;
+	}
 }

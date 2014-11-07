@@ -104,10 +104,11 @@
                                                          <content>
                                                             <AnchorPane>
                                                                <children>
-                                                                  <TableView fx:id="propertyTableView" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                  <TableView fx:id="propertyTableView" layoutX="14.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="-14.0" AnchorPane.topAnchor="0.0">
                                                                     <columns>
                                                                       <TableColumn fx:id="nameColumn" text="이름" />
-                                                                      <TableColumn fx:id="valueColumn" text="수치" />
+                                                                      <TableColumn fx:id="valueColumn" text="값" />
+                                                                        <TableColumn fx:id="noteColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="120.0" text="비고" />
                                                                     </columns>
                                                                   </TableView>
                                                                </children>
@@ -170,14 +171,13 @@
                                              <content>
                                                 <AnchorPane>
                                                    <children>
-                                                      <TableView AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                      <TableView fx:id="productTableView" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                          <columns>
-                                                            <TableColumn text="재료 이름" />
-                                                            <TableColumn text="산식" />
-                                                            <TableColumn text="재료" />
-                                                            <TableColumn text="수량" />
-                                                            <TableColumn text="금액" />
-                                                            <TableColumn text="비고" />
+                                                            <TableColumn fx:id="productNameColumn" text="품명" />
+                                                            <TableColumn fx:id="productFuncColumn" text="산식" />
+                                                            <TableColumn fx:id="productQuantityColumn" text="물량" />
+                                                            <TableColumn fx:id="productPriceColumn" text="금액" />
+                                                            <TableColumn fx:id="productNameColumn" text="비고" />
                                                          </columns>
                                                       </TableView>
                                                    </children>
