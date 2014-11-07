@@ -24,6 +24,8 @@ public class MainAppController {
 	@FXML
 	private TableColumn<Product, String> productNameColumn;
 	@FXML
+	private TableColumn<Product, String> productStandardColumn;
+	@FXML
 	private TableColumn<Product, String> productFuncColumn;
 	@FXML
 	private TableColumn<Product, String> productQuantityColumn;
@@ -36,9 +38,14 @@ public class MainAppController {
 	
 	public void setMainApp(MainApp mainApp) {
 		this.mainApp = mainApp;
+
 		projectTreeView.setRoot(new TreeItem<String>("토공"));
 		projectTreeView.getRoot().setExpanded(true);
-		projectTreeView.getRoot().getChildren().addAll(mainApp.getTreeItems());
+		projectTreeView.getRoot().getChildren().addAll(mainApp.getProjectItems());
+		
+		materialTreeView.setRoot(new TreeItem<String>("전체항목"));
+		materialTreeView.getRoot().setExpanded(true);
+		materialTreeView.getRoot().getChildren().addAll(mainApp.getMaterialItems());
 		
 		propertyTableView.setItems(mainApp.getPropertyData());
 		productTableView.setItems(mainApp.getProductData());
@@ -50,6 +57,7 @@ public class MainAppController {
 //		valueColumn.setCellValueFactory(cellData -> cellData.getValue().valueProperty());
 		
 		productNameColumn.setCellValueFactory(cellData -> cellData.getValue().nameProperty());
+		productStandardColumn.setCellValueFactory(cellData -> cellData.getValue().standardProperty());
 		productFuncColumn.setCellValueFactory(cellData -> cellData.getValue().funcProperty());
 		productQuantityColumn.setCellValueFactory(cellData -> cellData.getValue().quantityProperty());
 		productPriceColumn.setCellValueFactory(cellData -> cellData.getValue().priceProperty());

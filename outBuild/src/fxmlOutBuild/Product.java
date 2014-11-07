@@ -6,13 +6,15 @@ import javafx.beans.property.StringProperty;
 public class Product {
 
 	private StringProperty name;
+	private StringProperty standard;
 	private StringProperty func;
 	private StringProperty quantity;
 	private StringProperty price;
 	private StringProperty note;
 	
-	public Product(String name, String func, String quantity, String price, String note) {
+	public Product(String name, String standard, String func, String quantity, String price, String note) {
 		this.name = new SimpleStringProperty(name);
+		this.standard = new SimpleStringProperty(standard);
 		this.func = new SimpleStringProperty(func);
 		this.quantity = new SimpleStringProperty(quantity);
 		this.price = new SimpleStringProperty(price);
@@ -25,6 +27,14 @@ public class Product {
 
 	public void setName(String name) {
 		this.name.set(name);
+	}
+	
+	public String getStandard() {
+		return standard.get();
+	}
+	
+	public void setStandard(String standard) {
+		this.standard.set(standard);
 	}
 
 	public String getFunc() {
@@ -61,6 +71,10 @@ public class Product {
 	
 	public StringProperty nameProperty() {
 		return name;
+	}
+	
+	public StringProperty standardProperty() {
+		return standard;
 	}
 	
 	public StringProperty funcProperty() {

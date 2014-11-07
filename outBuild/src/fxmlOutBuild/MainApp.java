@@ -15,9 +15,9 @@ public class MainApp extends Application {
 
 	private Stage primaryStage;
 	private VBox root;
-	private ObservableList<TreeItem<String>> treeItems = FXCollections
+	private ObservableList<TreeItem<String>> projectItems = FXCollections
 			.observableArrayList();
-	private ObservableList<TreeItem<String>> treeItems2 = FXCollections
+	private ObservableList<TreeItem<String>> materialItems = FXCollections
 			.observableArrayList();
 	private ObservableList<Property> propertyData = FXCollections
 			.observableArrayList();
@@ -25,67 +25,64 @@ public class MainApp extends Application {
 			.observableArrayList();
 
 	public MainApp() {
-		treeItems.add(new TreeItem<String>("SIDE-P/전개1-1"));
-		treeItems.add(new TreeItem<String>("S/P토루(전2하-1)"));
-		treeItems.add(new TreeItem<String>("CIP/전개도1-1"));
-		treeItems.add(new TreeItem<String>("LW-G/전개도1-1"));
-		treeItems.add(new TreeItem<String>("S_M_I_G/T전개도"));
-		treeItems.add(new TreeItem<String>("띠장(전1상)S/P"));
-		treeItems.add(new TreeItem<String>("띠장/전개도1/S-P"));
-		treeItems.add(new TreeItem<String>("POST/P-코너STRUT"));
-		treeItems.add(new TreeItem<String>("CONTER/S(좌상귀)"));
-		treeItems.add(new TreeItem<String>("POST/P-M/S(NO)-8"));
-		treeItems.add(new TreeItem<String>("MAIN/S(NO @@-@@ )"));
-		treeItems.add(new TreeItem<String>("RAKER STRUT"));
-		treeItems.add(new TreeItem<String>("EARTH ANCHOR"));
-		treeItems.add(new TreeItem<String>("제거식 ANCHOR"));
-		treeItems.add(new TreeItem<String>("SOIL NAIL"));
-		treeItems.add(new TreeItem<String>("제거식ROCK NAIL"));
-		treeItems.add(new TreeItem<String>("POST P-복공"));
-		treeItems.add(new TreeItem<String>("복공판 설치"));
-		treeItems.add(new TreeItem<String>("CAP BEAN(전개도2)"));
-		treeItems.add(new TreeItem<String>("계측관리공사"));
-		treeItems.add(new TreeItem<String>("가설공사"));
-		treeItems.add(new TreeItem<String>("토공사 GL"));
-		treeItems.add(new TreeItem<String>("토공사(흙파기)"));
-		treeItems.add(new TreeItem<String>("부대토목"));
-		treeItems.add(new TreeItem<String>("파일공사"));
+		projectItems.add(new TreeItem<String>("SIDE-P/전개1-1"));
+		projectItems.add(new TreeItem<String>("S/P토루(전2하-1)"));
+		projectItems.add(new TreeItem<String>("CIP/전개도1-1"));
+		projectItems.add(new TreeItem<String>("LW-G/전개도1-1"));
+		projectItems.add(new TreeItem<String>("S_M_I_G/T전개도"));
+		projectItems.add(new TreeItem<String>("띠장(전1상)S/P"));
+		projectItems.add(new TreeItem<String>("띠장/전개도1/S-P"));
+		projectItems.add(new TreeItem<String>("POST/P-코너STRUT"));
+		projectItems.add(new TreeItem<String>("CONTER/S(좌상귀)"));
+		projectItems.add(new TreeItem<String>("POST/P-M/S(NO)-8"));
+		projectItems.add(new TreeItem<String>("MAIN/S(NO @@-@@ )"));
+		projectItems.add(new TreeItem<String>("RAKER STRUT"));
+		projectItems.add(new TreeItem<String>("EARTH ANCHOR"));
+		projectItems.add(new TreeItem<String>("제거식 ANCHOR"));
+		projectItems.add(new TreeItem<String>("SOIL NAIL"));
+		projectItems.add(new TreeItem<String>("제거식ROCK NAIL"));
+		projectItems.add(new TreeItem<String>("POST P-복공"));
+		projectItems.add(new TreeItem<String>("복공판 설치"));
+		projectItems.add(new TreeItem<String>("CAP BEAN(전개도2)"));
+		projectItems.add(new TreeItem<String>("계측관리공사"));
+		projectItems.add(new TreeItem<String>("가설공사"));
+		projectItems.add(new TreeItem<String>("토공사 GL"));
+		projectItems.add(new TreeItem<String>("토공사(흙파기)"));
+		projectItems.add(new TreeItem<String>("부대토목"));
+		projectItems.add(new TreeItem<String>("파일공사"));
 		
-		treeItems2.add(new TreeItem<String>("공통 가설 공사"));
-		treeItems2.add(new TreeItem<String>("가설공사"));
-		treeItems2.add(new TreeItem<String>(""));
-		treeItems2.add(new TreeItem<String>(""));
-		treeItems2.add(new TreeItem<String>(""));
-		treeItems2.add(new TreeItem<String>(""));
-		treeItems2.add(new TreeItem<String>(""));
-		treeItems2.add(new TreeItem<String>(""));
-		treeItems2.add(new TreeItem<String>(""));
-		treeItems2.add(new TreeItem<String>(""));
-		treeItems2.add(new TreeItem<String>(""));
-		treeItems2.add(new TreeItem<String>(""));
+		materialItems.add(new TreeItem<String>("공통 가설 공사"));
+		materialItems.add(new TreeItem<String>("가설공사"));
+		materialItems.add(new TreeItem<String>("지정 및 토공사"));
+		materialItems.add(new TreeItem<String>("철근 콘크리트 공사"));
+		materialItems.add(new TreeItem<String>("철골공사"));
+		materialItems.add(new TreeItem<String>("조적공사"));
+		materialItems.add(new TreeItem<String>("방수공사"));
+		materialItems.add(new TreeItem<String>("타일공사"));
+		materialItems.add(new TreeItem<String>("석공사"));
 
-		propertyData.add(new Property("토류판면적", 0));
-		propertyData.add(new Property("파일천공개수", 0));
-		propertyData.add(new Property("천공깊이-일반토사 최대높이", 0));
-		propertyData.add(new Property("천공깊이-일반토사 최소높이", 0));
-		propertyData.add(new Property("천공깊이-자갈섞인 점토 최대높이", 0));
-		propertyData.add(new Property("천공깊이-자갈섞인 점토 최소높이", 0));
-		propertyData.add(new Property("천공깊이-모래섞인 자갈 최대높이", 0));
-		propertyData.add(new Property("천공깊이-모래섞인 자갈 최소높이", 0));
-		propertyData.add(new Property("천공깊이-보통암 최대높이", 0));
-		propertyData.add(new Property("천공깊이-보통암 최소높이", 0));
-		propertyData.add(new Property("파일원주길이", 0));
-		propertyData.add(new Property("파일 단면적", 0));
+		propertyData.add(new Property("일반토사층 최고깊이", 0));
+		propertyData.add(new Property("일반토사층 최저깊이", 0));
+		propertyData.add(new Property("자갈섞인 점토층 최고깊이", 0));
+		propertyData.add(new Property("자갈섞인 점토층 최저깊이", 0));
+		propertyData.add(new Property("천공깊이-자갈섞인 점토 최고깊이", 0));
+		propertyData.add(new Property("천공깊이-자갈섞인 점토 최저깊", 0));
+		propertyData.add(new Property("보통암층 최고깊이", 0));
+		propertyData.add(new Property("보통암층 최저깊이", 0));
+		propertyData.add(new Property("파일천공공수", 0));
 
-		productData.add(new Product("SIDE-PILE 천공", "1*1", "1", "100", ""));
-		productData.add(new Product("SIDE-PILE 연결", "2*2", "4", "400", ""));
-		productData.add(new Product("레미콘파넬/SIDE-PILE용", "3*3", "9", "900", "기타1"));
-		productData.add(new Product("품1", "4*4", "16", "1600", ""));
-		productData.add(new Product("품2", "5*5", "25", "2500", ""));
+		productData.add(new Product("SIDE-PILE 천공", "일반토사층", "(일반토사층 최고깊이+일반토사층 최저깊이)/2 * 파일천공공수", "1", "100", ""));
+		productData.add(new Product("SIDE-PILE 천공", "자갈섞인 점토층", "(자갈섞인 점토층 최고깊이+자갈섞인 점토층 최저깊이)/2 * 파일천공공수", "1", "100", ""));
+		productData.add(new Product("SIDE-PILE 천공", "모래섞인 자갈층", "(모래섞인 자갈층 최고깊이+모래섞인 자갈층 최저깊이)/2 * 파일천공공수", "1", "100", ""));
+		productData.add(new Product("SIDE-PILE 천공", "보통암층", "(보통암층 최고깊이+보통암층 최저깊이)/2 * 파일천공공수", "1", "100", ""));
 	}
 
-	public ObservableList<TreeItem<String>> getTreeItems() {
-		return this.treeItems;
+	public ObservableList<TreeItem<String>> getProjectItems() {
+		return this.projectItems;
+	}
+
+	public ObservableList<TreeItem<String>> getMaterialItems() {
+		return this.materialItems;
 	}
 
 	public ObservableList<Property> getPropertyData() {
