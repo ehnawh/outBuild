@@ -141,7 +141,32 @@
                                                          <content>
                                                             <AnchorPane>
                                                                <children>
-                                                                  <TreeView AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                                  <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                     <children>
+                                                                        <HBox>
+                                                                           <children>
+                                                                              <Label text="찾기" />
+                                                                              <TextField />
+                                                                           </children>
+                                                                           <padding>
+                                                                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                           </padding>
+                                                                        </HBox>
+                                                                        <Separator />
+                                                                        <VBox prefHeight="50.0">
+                                                                           <children>
+                                                                              <Label text="옵션" />
+                                                                              <FlowPane>
+                                                                                 <children>
+                                                                                    <CheckBox mnemonicParsing="false" text="CheckBox" />
+                                                                                    <CheckBox mnemonicParsing="false" text="CheckBox" />
+                                                                                 </children>
+                                                                              </FlowPane>
+                                                                           </children>
+                                                                        </VBox>
+                                                                        <TreeView />
+                                                                     </children>
+                                                                  </VBox>
                                                                </children>
                                                             </AnchorPane>
                                                          </content>
