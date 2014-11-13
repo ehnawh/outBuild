@@ -2,6 +2,7 @@ package fxmlOutBuild;
 
 import java.io.IOException;
 
+import fxmlOutBuild.model.Material;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -22,6 +23,8 @@ public class MainApp extends Application {
 	private ObservableList<Property> propertyData = FXCollections
 			.observableArrayList();
 	private ObservableList<Product> productData = FXCollections
+			.observableArrayList();
+	private ObservableList<Material> materialData = FXCollections
 			.observableArrayList();
 
 	public MainApp() {
@@ -51,9 +54,17 @@ public class MainApp extends Application {
 		projectItems.add(new TreeItem<String>("부대토목"));
 		projectItems.add(new TreeItem<String>("파일공사"));
 		
+		TreeItem<String> mtype = new TreeItem<String>("지정 및 토공사");
+		mtype.getChildren().add(new TreeItem("PHC파일(자재)"));
+		mtype.getChildren().add(new TreeItem("EMC파일"));
+		mtype.getChildren().add(new TreeItem("파일천공"));
+		mtype.getChildren().add(new TreeItem("파일기타공사"));
+		mtype.getChildren().add(new TreeItem("팽이말뚝"));
+		mtype.getChildren().add(new TreeItem("영구방수"));
+		
 		materialItems.add(new TreeItem<String>("공통 가설 공사"));
 		materialItems.add(new TreeItem<String>("가설공사"));
-		materialItems.add(new TreeItem<String>("지정 및 토공사"));
+		materialItems.add(mtype);
 		materialItems.add(new TreeItem<String>("철근 콘크리트 공사"));
 		materialItems.add(new TreeItem<String>("철골공사"));
 		materialItems.add(new TreeItem<String>("조적공사"));
@@ -75,6 +86,8 @@ public class MainApp extends Application {
 		productData.add(new Product("SIDE-PILE 천공", "자갈섞인 점토층", "(자갈섞인 점토층 최고깊이+자갈섞인 점토층 최저깊이)/2 * 파일천공공수", "1", "100", ""));
 		productData.add(new Product("SIDE-PILE 천공", "모래섞인 자갈층", "(모래섞인 자갈층 최고깊이+모래섞인 자갈층 최저깊이)/2 * 파일천공공수", "1", "100", ""));
 		productData.add(new Product("SIDE-PILE 천공", "보통암층", "(보통암층 최고깊이+보통암층 최저깊이)/2 * 파일천공공수", "1", "100", ""));
+		
+		materialData.add(new Material(1, "SIDE-PILE 천공", "보통암층", "M", "", "", "설명", 0, 0, 0, 0));
 	}
 
 	public ObservableList<TreeItem<String>> getProjectItems() {
