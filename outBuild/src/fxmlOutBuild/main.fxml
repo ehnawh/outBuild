@@ -94,7 +94,7 @@
                            <items>
                               <AnchorPane>
                                  <children>
-                                    <SplitPane dividerPositions="0.8" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <SplitPane dividerPositions="0.7662721893491125" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <items>
                                           <AnchorPane>
                                              <children>
@@ -127,6 +127,58 @@
                                                                   </TreeTableView>
                                                                </children>
                                                             </AnchorPane>
+                                                         </content>
+                                                      </Tab>
+                                                      <Tab text="재료">
+                                                         <content>
+																	<VBox>
+																	   <children>
+																	      <HBox alignment="CENTER_LEFT">
+																	         <children>
+																	            <Label text="찾을 문자열 : ">
+																	               <HBox.margin>
+																	                  <Insets left="10.0" />
+																	               </HBox.margin>
+																	            </Label>
+																	            <TextField>
+																	               <HBox.margin>
+																	                  <Insets />
+																	               </HBox.margin>
+																	            </TextField>
+																	            <Label text="검색필드 : ">
+																	               <HBox.margin>
+																	                  <Insets left="10.0" />
+																	               </HBox.margin>
+																	            </Label>
+																	            <ChoiceBox>
+																	               <HBox.margin>
+																	                  <Insets />
+																	               </HBox.margin>
+																	            </ChoiceBox>
+																	            <CheckBox mnemonicParsing="false" text="전체 자료">
+																	               <HBox.margin>
+																	                  <Insets left="10.0" />
+																	               </HBox.margin>
+																	            </CheckBox>
+																	            <CheckBox mnemonicParsing="false" text="사용된 자료">
+																	               <HBox.margin>
+																	                  <Insets left="10.0" />
+																	               </HBox.margin>
+																	            </CheckBox>
+																	         </children>
+																	      </HBox>
+																	      <TableView>
+																	         <columns>
+																	            <TableColumn fx:id="goodsName" minWidth="-Infinity" prefWidth="234.0" text="품명" />
+																	            <TableColumn fx:id="standard" minWidth="-1.0" prefWidth="263.0" text="규격" />
+																	            <TableColumn fx:id="measure" minWidth="-1.0" prefWidth="72.0" text="단위" />
+																	            <TableColumn fx:id="extraCharge" minWidth="-1.0" prefWidth="74.0" text="할증" />
+																	            <TableColumn fx:id="exchangeMeasure" minWidth="-1.0" prefWidth="65.0" text="환산단위" />
+																	            <TableColumn fx:id="scakeFactor" minWidth="-1.0" prefWidth="62.0" text="환산계수" />
+																	         </columns>
+																	      </TableView>
+																	   </children>
+																	</VBox>
                                                          </content>
                                                       </Tab>
                                                    </tabs>
@@ -180,6 +232,36 @@
                                                             </AnchorPane>
                                                          </content>
                                                       </Tab>
+                                                      <Tab text="재료">
+                                                         <content>
+                                                            <AnchorPane>
+                                                               <children>
+                                                                  <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                     <children>
+                                                                        <HBox>
+                                                                           <children>
+                                                                              <Label text="산식 : " />
+                                                                              <TextArea prefHeight="200.0" prefWidth="183.0" />
+                                                                           </children>
+                                                                           <padding>
+                                                                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                           </padding>
+                                                                        </HBox>
+                                                                        <HBox>
+                                                                           <children>
+                                                                              <Label text="설명 : " />
+                                                                              <TextArea prefHeight="200.0" prefWidth="183.0" />
+                                                                           </children>
+                                                                           <padding>
+                                                                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                           </padding>
+                                                                        </HBox>
+                                                                     </children>
+                                                                  </VBox>
+                                                               </children>
+                                                            </AnchorPane>
+                                                         </content>
+                                                      </Tab>
                                                    </tabs>
                                                 </TabPane>
                                              </children>
@@ -208,6 +290,11 @@
                                                       </TableView>
                                                    </children>
                                                 </AnchorPane>
+                                             </content>
+                                          </Tab>
+                                          <Tab text="금액">
+                                             <content>
+                                                <AnchorPane />
                                              </content>
                                           </Tab>
                                           <Tab text="금액">
